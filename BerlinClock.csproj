@@ -50,6 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDD\BerlinClockFeatureSteps.cs" />
+    <Compile Include="Classes\DTO\BerlinClockTimeSpan.cs" />
+    <Compile Include="Classes\Engine\TimeParsers\StringToBerlinClockTimeSpanParser.cs" />
+    <Compile Include="Classes\Engine\TimeTransformingFactories\TimeTransformingFactory.cs" />
+    <Compile Include="Classes\Engine\TimeTransformingFactories\BerlinClock\StringToBerlinClockTransformingFactory.cs" />
+    <Compile Include="Classes\Engine\ITimeTransformingFactory.cs" />
+    <Compile Include="Classes\Engine\ITimeDecorator.cs" />
+    <Compile Include="Classes\Engine\ITimeParser.cs" />
+    <Compile Include="Classes\Engine\TimeDecorators\BerlinClockTimeSpanDecorator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BDD\BerlinClockFeatureSteps.feature.cs">
       <AutoGen>True</AutoGen>
@@ -70,6 +78,7 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

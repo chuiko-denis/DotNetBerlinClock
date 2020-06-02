@@ -7,7 +7,7 @@ namespace BerlinClock.Classes.Engine.TimeParsers
     {
         public BerlinClockTimeSpan Parse(string timeRepresentation)
         {
-            var regex = new Regex(@"^(?<hours>[0-2][0-4])\:(?<minutes>[0-6]\d)\:(?<seconds>[0-6]\d)$");
+            var regex = new Regex(@"^(?<hours>[0-2][0-4])\:(?<minutes>[0-5]\d)\:(?<seconds>[0-5]\d)$");
             var timeParts = regex.Match(timeRepresentation);
 
             int hours = int.Parse(timeParts.Groups["hours"].Value);
